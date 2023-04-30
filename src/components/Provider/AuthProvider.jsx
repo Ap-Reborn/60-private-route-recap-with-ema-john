@@ -11,11 +11,13 @@ const [user,setUser] =useState(null);
 const [loading,setLoading] =useState(true);
 // akta function banabo jeta do a peramiter niba
 const createUser = (email,password) => {
+    setLoading(true);
     // nicer line ta fire base er ata 3 ta jinis lage
     return createUserWithEmailAndPassword(auth,email,password);
     // aita vaire use korbo tai nica okan teke patabo createUser
 }
 const signIn = (email,password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth,email,password);
 }
 // akn signout ta nam logout dibo jate firbaase sate mil na kai.
